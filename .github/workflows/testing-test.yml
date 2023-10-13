@@ -1,9 +1,6 @@
 name: Database and Node.js Setup
 
-on:
-  push:
-    branches:
-      - main # Adjust the branch name if needed
+on: [push]
 
 jobs:
   setup:
