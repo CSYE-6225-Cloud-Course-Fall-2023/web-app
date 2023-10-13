@@ -1,9 +1,6 @@
 name: Database and Node.js Setup
 
-on:
-  push:
-    branches:
-      - main # Adjust the branch name if needed
+on: [push]
 
 jobs:
   setup:
@@ -42,10 +39,7 @@ jobs:
         run: npm install
 
       - name: Run index.js
-        run: node index.js
-        
-      - name: Wait for 10 seconds
-        run: sleep 15
+        run: node index.js &
 
       - name: Check URL "http://localhost:3000/healthz"
         run: |
