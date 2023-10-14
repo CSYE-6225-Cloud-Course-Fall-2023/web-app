@@ -35,11 +35,12 @@ jobs:
         id: validate-status
         run: |
           if [[ $(packer validate packer/aws-Debian.pkr.hcl) == *"The configuration is valid."* ]]; then
-            echo "Packer template validation succeeded.";
+            echo "Packer template validation succeeded."
           else
-            echo "Packer template validation failed. Please fix any issues before merging.";
-            exit 1;
-          }
+            echo "Packer template validation failed. Please fix any issues before merging."
+            exit 1
+          fi
+
 
       - name: Final checks
         if: ${{ steps.validate-status.outcome == 'success' }}
