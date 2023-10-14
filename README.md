@@ -1,14 +1,14 @@
 Prerequisites for building and deploying your application locally.
 
 # to enter into debian
-ssh -i "C:\Users\Yuvaraj\.ssh\digitalocean" root@161.35.98.11
+ssh -i "C:\Users\Sai Sravani\.ssh\digitalocean" root@161.35.98.11
 
 # create a path to insert the file 
 create a directory - mkdir directory_name
 
 # open in new terminal
 #to add to debain 
-scp -i "C:\Users\Yuvaraj\.ssh\digitalocean" "file_name.zip" root@161.35.98.11:/path
+scp -i "C:\Users\Sai Sravani\.ssh\digitalocean" "file_name.zip" root@161.35.98.11:/path
 
 # to install unzip
 sudo apt install unzip
