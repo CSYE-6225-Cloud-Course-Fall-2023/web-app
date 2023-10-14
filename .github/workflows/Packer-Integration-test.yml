@@ -34,7 +34,7 @@ jobs:
       - name: Check validation status
         id: validate-status
         run: |
-          if [ $? -eq 0 ]; then
+          if [[ $(packer validate packer/aws-Debian.pkr.hcl) == *"The configuration is valid"* ]]; then
             echo "Packer template validation succeeded.";
           else
             echo "Packer template validation failed. Please fix any issues before merging.";
