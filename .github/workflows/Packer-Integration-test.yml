@@ -13,6 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+
+      - name: Run Packer init
+        run: packer init packer/
+
       - name: Run packer fmt
         run: packer fmt packer/aws-Debian.pkr.hcl
 
