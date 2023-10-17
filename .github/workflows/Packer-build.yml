@@ -1,10 +1,7 @@
 name: Build AMI with Packer
 
 on:
-  workflow_run:
-    workflows: ["Packer-Integration-test.yml"]
-    types:
-      - success
+  pull_request:
 
 jobs:
   create-zip:
@@ -18,7 +15,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: my-artifact
-          path: ./
+          path: ${{ github.workspace }}
 
       - name: Build AMI
         run: |
