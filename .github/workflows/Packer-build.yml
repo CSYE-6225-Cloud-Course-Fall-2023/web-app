@@ -1,9 +1,10 @@
 name: Build AMI with Packer
 
 on:
-  pull_request:
+  workflow_run:
+    workflows: ["Packer-PR-Checks"]
     types:
-      - closed
+      - completed
 
 jobs:
   create-zip:
@@ -14,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Download ZIP file
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: my-artifact
           path: ./
