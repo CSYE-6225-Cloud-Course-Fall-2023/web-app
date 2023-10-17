@@ -2,7 +2,7 @@ name: Build AMI with Packer
 
 on:
   workflow_run:
-    workflows: ["Packer-Integration-test"]
+    workflows: ["Packer PR Checks"]
     types:
       - completed
 
