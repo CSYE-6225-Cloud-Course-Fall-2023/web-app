@@ -11,6 +11,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Create Zip Archive
+        run: |
+          zip -r Yuvaraj_dalavai_002789615_03.zip .
+
+      - name: Upload ZIP file
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-zip-artifact
+          path: Yuvaraj_dalavai_002789615_03.zip
 
       - name: Run Packer init
         run: packer init /packer/aws-Debian.pkr.hcl
