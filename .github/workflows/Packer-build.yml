@@ -1,10 +1,9 @@
 name: Build AMI with Packer
 
 on:
-  workflow_run:
-    workflows: ["Packer-Integration-test"]
+  pull_request:
     types:
-      - completed
+      - closed
 
 jobs:
   create-zip:
