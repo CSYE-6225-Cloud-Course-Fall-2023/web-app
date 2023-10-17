@@ -15,7 +15,7 @@ jobs:
 
 
       - name: Run Packer init
-        run: packer init packer/
+        run: packer init packer/aws-Debian.pkr.hcl
 
       - name: Run packer fmt
         run: packer fmt packer/aws-Debian.pkr.hcl

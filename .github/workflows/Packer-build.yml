@@ -18,12 +18,6 @@ jobs:
         run: |
           zip -r Yuvaraj_Dalavai_002789615_03.zip .
 
-
-      - name: Set up Packer
-        uses: hashicorp/setup-packer@latest
-        with:
-          packer_version: 1.7.0
-
       - name: Build AMI
         run: |
           packer init aws-Debian.pkr.hcl
