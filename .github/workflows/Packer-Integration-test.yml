@@ -2,8 +2,6 @@ name: Packer PR Checks
 
 on:
   pull_request:
-    paths:
-      - 'aws-Debian.pkr.hcl' 
 
 jobs:
   packer_checks:
@@ -15,10 +13,10 @@ jobs:
 
 
       - name: Run Packer init
-        run: packer init packer/aws-Debian.pkr.hcl
+        run: packer init ./packer/aws-Debian.pkr.hcl
 
       - name: Run packer fmt
-        run: packer fmt packer/aws-Debian.pkr.hcl
+        run: packer fmt ./packer/aws-Debian.pkr.hcl
 
       - name: Check for changes
         id: git-diff
@@ -29,7 +27,7 @@ jobs:
           }
 
       - name: Run packer validate
-        run: packer validate packer/aws-Debian.pkr.hcl 
+        run: packer validate ./packer/aws-Debian.pkr.hcl 
 
       - name: Check validation status
         id: validate-status
