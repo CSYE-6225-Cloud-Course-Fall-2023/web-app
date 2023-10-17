@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: ["Packer-Integration-test.yml"]
     types:
-      - completed
+      - success
 
 jobs:
   create-zip:
