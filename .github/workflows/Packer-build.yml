@@ -20,7 +20,7 @@ jobs:
 
 
       - name: Set up Packer
-        uses: hashicorp/setup-packer@v2
+        uses: hashicorp/setup-packer@latest
         with:
           packer_version: 1.7.0
 

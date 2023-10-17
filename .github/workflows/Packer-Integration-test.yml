@@ -3,7 +3,7 @@ name: Packer PR Checks
 on:
   pull_request:
     paths:
-      - 'packer/aws-Debian.pkr.hcl' 
+      - 'aws-Debian.pkr.hcl' 
 
 jobs:
   packer_checks:
