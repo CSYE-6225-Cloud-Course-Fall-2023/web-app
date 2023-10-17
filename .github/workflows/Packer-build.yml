@@ -2,10 +2,13 @@ name: Build AMI with Packer
 
 on:
   pull_request:
+    types:
+      - closed
 
 jobs:
   create-zip:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
 
     steps:
       - name: Checkout Repository
