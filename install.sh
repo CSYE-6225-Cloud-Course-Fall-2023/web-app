@@ -49,9 +49,9 @@ sudo mysql -u root -p"$ROOT_PASSWORD" -e "FLUSH PRIVILEGES;"
 # Unzip the file to the destination directory
 sudo unzip "$ZIP_FILE" -d "$DEST_DIR"
 
-sudo chmod 655 "/opt/Yuvaraj_dalavai_002789615_03"
+sudo chmod 655 "/opt"
 
-cd /opt/Yuvaraj_dalavai_002789615_03/
+cd /opt/
 
 sudo npm install
 
