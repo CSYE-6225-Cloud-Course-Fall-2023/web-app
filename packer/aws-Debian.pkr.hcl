@@ -66,7 +66,7 @@ build {
   ]
 
   provisioner "file" {
-    source      = "web-app/Yuvaraj_dalavai_002789615_03.zip"
+    source      = "./Yuvaraj_dalavai_002789615_03.zip"
     destination = "/tmp/Yuvaraj_dalavai_002789615_03.zip"
   }
 
