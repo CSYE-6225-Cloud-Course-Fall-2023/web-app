@@ -3,7 +3,7 @@ name: Database and Node.js Setup
 on:
   pull_request:
     branches:
-      - main
+      - Test-Branch
 
 jobs:
   setup:

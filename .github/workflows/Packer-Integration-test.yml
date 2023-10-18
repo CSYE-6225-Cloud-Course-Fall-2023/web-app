@@ -3,7 +3,7 @@ name: Packer-PR-Checks
 on:
   pull_request:
     branches:
-      - main
+      - Test-Branch
 
 jobs:
   packer_checks:
