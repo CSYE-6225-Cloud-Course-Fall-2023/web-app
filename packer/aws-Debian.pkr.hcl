@@ -27,13 +27,33 @@ variable "subnet_id" {
   default = "subnet-0e2ecf06922ae0563"
 }
 
+variable "ami_name" {
+  type    = string
+  default = "Ami_1"
+}
+
+variable "ami_description" {
+  type    = string
+  default = "First_AMI_Built_by_me"
+}
+
+variable "profile" {
+  type    = string
+  default = "yuvaraj-dev"
+}
+
+variable "instance_type" {
+  type    = string
+  default = "t2.micro"
+}
+
 
 
 source "amazon-ebs" "my-ami" {
-  ami_name        = "Ami_1"
-  ami_description = "First_AMI_Built_by_me"
+  ami_name        = "${var.ami_name}"
+  ami_description = "${var.ami_description}"
   region          = "${var.aws_region}"
-  profile         = "yuvaraj-dev"
+  profile         = "${var.profile}"
   ami_users       = [245217519501, 940256833926]
 
   ami_regions = [
@@ -47,7 +67,7 @@ source "amazon-ebs" "my-ami" {
     max_attempts  = 50
   }
 
-  instance_type = "t2.micro"
+  instance_type = "${var.instance_type}"
   source_ami    = "${var.source_ami}"
   ssh_username  = "${var.ssh_username}"
   subnet_id     = "${var.subnet_id}"
