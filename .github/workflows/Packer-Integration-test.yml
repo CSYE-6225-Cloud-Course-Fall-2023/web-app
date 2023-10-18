@@ -15,12 +15,6 @@ jobs:
         run: |
           zip -r Yuvaraj_dalavai_002789615_03.zip .
 
-      - name: Upload ZIP file
-        uses: actions/upload-artifact@v3
-        with:
-          name: my-artifact
-          path: Yuvaraj_dalavai_002789615_03.zip
-
       - name: Run Packer init
         run: packer init ./packer/aws-Debian.pkr.hcl
 
