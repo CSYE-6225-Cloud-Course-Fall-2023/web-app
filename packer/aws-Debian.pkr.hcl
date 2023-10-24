@@ -29,7 +29,7 @@ variable "subnet_id" {
 
 variable "ami_name" {
   type    = string
-  default = "Ami_1"
+  default = ""
 }
 
 variable "ami_description" {
