@@ -5,7 +5,7 @@ Hello
 Hi
 hello
 
-# to enter into debian
+# to enter into debian  test
 ssh -i "C:\Users\Yuvaraj\.ssh\digitalocean" root@161.35.98.11
 
 # create a path to insert the file 
