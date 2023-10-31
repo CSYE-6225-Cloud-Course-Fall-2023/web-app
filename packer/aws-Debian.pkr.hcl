@@ -54,6 +54,8 @@ source "amazon-ebs" "my-ami" {
   ami_description = "${var.ami_description}"
   region          = "${var.aws_region}"
   ami_users       = [245217519501, 940256833926]
+  access_key      = "{{user `AWS_ACCESS_KEY_ID`}}"
+  secret_key      = "{{user `AWS_SECRET_ACCESS_KEY`}}"
 
   ami_regions = [
     "us-east-1",
