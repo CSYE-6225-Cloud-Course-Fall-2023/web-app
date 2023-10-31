@@ -1,8 +1,5 @@
 Prerequisites for building and deploying your application locally.
 
-Hello
-
-Hi
 hello
 
 # to enter into debian
