@@ -89,6 +89,7 @@ jobs:
               else
                 echo "Instance refresh not yet successful waiting....."
                 sleep 1
+                dsaa
               fi
             done
           fi
